@@ -2,6 +2,14 @@
 module.exports = {
   solidity: {
     version: '0.8.9',
+    defaultNetwork: 'goerli',
+    networks: {
+      hardhat:{},
+      goerli:{
+        url: "https://rpc.slock.it/goerli",
+        accounts: [`0x${process.env.ALCHEMY_KEY}`],
+      }
+    },
     settings: {
       optimizer: {
         enabled: true,
